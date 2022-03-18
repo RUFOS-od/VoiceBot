@@ -1,6 +1,7 @@
 import speech_recognition as sr
 import pyttsx3 as ttx
 import pywhatkit
+import datetime
 
 
 listener = sr.Recognizer()
@@ -36,13 +37,24 @@ def ecouter():
 def lancer_assistant():
     command = ecouter()
     print(command)
-    if "mets la chanson de" in command:
+
+    #pour jouer la musique sur youtube
+    if ("chanson" or "musique") in command:
         chanteur = command.replace("mets la chanson de", "")
         print(chanteur)
         pywhatkit.playonyt(chanteur)
         parler(chanteur)
+    #pour avoir l'heur een temps reel
+    elif "heure" in command:
+        heure = datetime.datetime.now().strftime("%H:%M")
+        parler("Il est"+heure)
+
+    elif "Bonjour" in command:
+        parler("Bonjour ça va ?")
 
 
 
+#pour faire paser en bloucle mon programme
 
-lancer_assistant()
+while True:
+    lancer_assistant()
