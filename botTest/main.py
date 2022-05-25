@@ -32,7 +32,7 @@ def ecouter():
 def lancer_assistant():
     command=ecouter()
     print(command)
-    if 'mets la chanson de' in command:
+    if "chanson" or "Chanson" or "Musique" or "musique" in command:
         chanteur=command.replace('mets la chanson de','')
         print(chanteur)
         pywhatkit.playonyt(chanteur)
