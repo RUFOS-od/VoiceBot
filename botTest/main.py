@@ -32,11 +32,11 @@ def ecouter():
 def lancer_assistant():
     command=ecouter()
     print(command)
-    if "chanson" or "Chanson" or "Musique" or "musique" in command:
-        chanteur=command.replace('mets la chanson de','')
-        print(chanteur)
-        pywhatkit.playonyt(chanteur)
-    elif 'heure' in command:
+    # if "chanson" or "Chanson" or "Musique" or "musique" in command:
+    #     chanteur=command.replace('mets la chanson de','')
+    #     print(chanteur)
+    #     pywhatkit.playonyt(chanteur)
+    if 'heure' in command:
         heure=datetime.datetime.now().strftime('%H:%M')
         parler('il est'+heure)
     elif 'Bonjour' in command:

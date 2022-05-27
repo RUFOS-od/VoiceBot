@@ -1,0 +1,13 @@
+{"intents":[
+    {"tag": "greetings",
+    "patterns": ["hello", "hey", "hi and hey", "good day", "Greetings"],
+    "responses": ["hello!", "Heys!", "What can I do for ?"]},
+
+    {"tag": "goodbye",
+    "patterns": ["cya", "See you later", "Goodbye", "I am leaving", "bye"],
+    "responses": ["Sad to see you go: (", "Talk to you later", "Goodbye"]},
+
+    {"tag": "age",
+    "patterns": ["how old", "how old is florian", "what is your age", "age?"],
+    "responses": ["My owner Florian is 21 years old", "21 years"]}
+]}
