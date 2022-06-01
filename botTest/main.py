@@ -20,7 +20,8 @@ engine.setProperty('voice','french')
 def parler(text):
     engine.say(text)
     engine.runAndWait()
- 
+ #fbdhbhfjbsvdhjcbvjshvf
+ #jfv,rhfkvfhgnre
 
  #la fonction qui permet d'écouter
 
